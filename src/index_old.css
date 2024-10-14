@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Common Apply */
+/* button color: btn-lg, btn-md, btn-sm */
+/* section-id */
+/* header-text */
+/* sub-header-text */
+/* body-text */
+/* icons-md, icons-sm */
+/* testimonial-img, testimonial-name, testimonial-company */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  @layer components {
+    .max-container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+  
+    .input { /* will be styled */
+      @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+    }
+
+    .btn-main {
+      @apply bg:primary;
+    }
+
+  }
+  
+  @layer utilities {
+    /* Hamburger line styling start */
+    .hamburger-line {
+      @apply bg-[#62644C] block h-[2px] w-[24px] my-[3px] transition-all duration-300 ease-in-out;
+    }
+
+    .sidebar {
+      @apply fixed top-0 right-[-250px] h-full bg-white transition-all duration-300 ease-in p-12;
+    }
+
+    .sidebar.open {
+      @apply right-0;
+    }
+
+    .overlay {
+      @apply absolute top-0 right-0 w-[42px] h-[42px] m-2 shadow focus:outline-none text-black font-bold transition-all duration-300 ease-in-out hidden;
+    }
+
+    .overlay.open {
+      @apply block;
+      /* Show overlay */
+    }
+        /* Hamburger line styling end */
+
+    .padding {
+      @apply px-8 py-12 sm:px-16 sm:py-24;
+    }
+  
+    .padding-x {
+      @apply px-8 sm:px-16;
+    }
+  
+    .padding-y {
+      @apply py-12 sm:py-24;
+    }
+  
+    .padding-l {
+      @apply pl-8 sm:pl-16;
+    }
+  
+    .padding-r {
+      @apply pr-8 sm:pr-16;
+    }
+  
+    .padding-t {
+      @apply pt-12 sm:pt-24;
+    }
+  
+    .padding-b {
+      @apply pb-12 sm:pb-24;
+    }
+  
+    .info-text {
+      @apply font-montserrat text-slate-gray text-lg leading-7;
+    }
+  }
